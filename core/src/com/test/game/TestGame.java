@@ -96,7 +96,7 @@ public class TestGame extends ApplicationAdapter {
 		Vector3 touchPos = new Vector3();
 		touchPos.set(lastMousePosition.x, lastMousePosition.y, 0);
 		camera.unproject(touchPos);
-		bucket.x = MathFunctions.clamp(MathFunctions.lerp(bucket.x, touchPos.x - (float) 64 / 2, 5f * dt), 0f, (float) 800 - 64);
+		bucket.x = MathUtils.clamp(MathUtils.lerp(bucket.x, touchPos.x - (float) 64 / 2, 5f * dt), 0f, (float) 800 - 64);
 
 
 		for (Iterator<Rectangle> iter = raindrops.iterator(); iter.hasNext(); ) {
